@@ -11,7 +11,7 @@
      "host": "mysql_ghost",
      "user": "ghost",
      "password": "xxxxxx",
-     "database": "ghost", 
+     "database": "xxxxx", 
       "filename": "/var/lib/ghost/content/data/ghost.db"
     }
   },
