@@ -31,10 +31,10 @@
   "storage": {
     "active": "qn-store",
     "qn-store": {
-      "accessKey": "znRhQ03QiYaGZeB-zja6EDGwIp8ZRMHZ8ymeHW4k",
-      "secretKey": "BhwKiZBu0OBsNrKC997t2ejJVXbhufGNVU-SVkFy",
+      "accessKey": "xxxxx",
+      "secretKey": "xxxxx",
       "bucket": "linuxwt",
-      "origin": "https://img.linuxwt.com",
+      "origin": "xxxxxx",
       "fileKey": {
         "safeString": true,
         "prefix": "[images]/YYYY/MM",
