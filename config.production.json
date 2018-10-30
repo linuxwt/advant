@@ -9,7 +9,7 @@
     "client": "mysql",
     "connection": {
      "host": "mysql_ghost",
-     "user": "ghost",
+     "user": "xxxxxx",
      "password": "xxxxxx",
      "database": "xxxxx", 
       "filename": "/var/lib/ghost/content/data/ghost.db"
