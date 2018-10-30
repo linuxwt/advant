@@ -1,0 +1,47 @@
+nginx_ghost:  
+    restart: always
+    image: nginx
+    container_name: nginx_ghost
+    volumes:
+        - /etc/localtime:/etc/localtime
+        - ./nginx.conf:/etc/nginx/nginx.conf 
+        - ./nginx_reverse.conf:/etc/nginx/conf.d/default.conf
+        - /etc/timezone:/etc/timezone
+        - ./access.log:/var/log/nginx/access.log
+        - ./error_nginx.log:/var/log/nginx/error.log
+        - /etc/letsencrypt:/etc/letsencrypt
+    links:
+        - myghost
+    privileged: true
+    ports:
+        - 80:80
+        - 443:443
+myghost:  
+    restart: always
+    image: ghost
+    container_name: myghost
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
+      - ./content:/var/lib/ghost/content
+      - ./config.production.json:/var/lib/ghost/config.production.json
+    privileged: true
+    expose:
+       - "2368"
+    links:
+      - mysql_ghost
+mysql_ghost:
+  restart: always
+  image: mysql:5.7
+  container_name: mysql_ghost
+  volumes:
+    - /etc/localtime:/etc/localtime
+    - /etc/timezone:/etc/timezone
+    - $PWD/mysql:/var/lib/mysql
+    - $PWD/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+    - $PWD/mysql.log:/var/log/mysql/general.log
+    - $PWD/error_mysql.log:/var/log/mysql/error.log
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: rootpassword
