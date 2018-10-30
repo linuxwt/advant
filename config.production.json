@@ -23,8 +23,8 @@
          "secureConnection": true,
          "port": 465,
          "auth": {
-              "user": "439757183@qq.com",
-              "pass": "wcnhlnidwozocade"
+              "user": "xxxxxx",
+              "pass": "xxxxxx"
        	  }
      }
   },
