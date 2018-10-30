@@ -10,7 +10,7 @@
     "connection": {
      "host": "mysql_ghost",
      "user": "ghost",
-     "password": "Lanbroad202",
+     "password": "xxxxxx",
      "database": "ghost", 
       "filename": "/var/lib/ghost/content/data/ghost.db"
     }
