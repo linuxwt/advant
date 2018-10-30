@@ -17,7 +17,7 @@
   },
   "mail": {
     "transport": "SMTP",
-    "from": "'Custom Name' <439757183@qq.com>",
+    "from": "'Custom Name' <xxxxxx",
     "options": {
          "host": "smtp.qq.com",
          "secureConnection": true,
