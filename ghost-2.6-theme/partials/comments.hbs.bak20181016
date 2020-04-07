@@ -1,0 +1,11 @@
+<section class="comments-area inner">
+	<h2 class="comments-title"><span class="icon-plus-custom" aria-hidden="true"></span> Comments</h2>
+	<div id="disqus_thread" style="margin-left:15px;margin-right:15px;"></div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "{{url absolute="true"}}";
+			this.page.identifier = "ghost-{{comment_id}}";
+		};
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+</section>
